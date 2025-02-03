@@ -5,6 +5,7 @@ export default defineConfig({
   base: '/blogcelldocs/',
   title: "BlogCell.",
   description: "Docs.",
+  outDir: './dist',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

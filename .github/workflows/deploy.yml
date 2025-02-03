@@ -56,9 +56,7 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: |
-          pnpm run docs:build
-          ls -la BlogCellDocs/.vitepress/dist
+        run: pnpm run docs:build
 
       - name: Debug - List directories
         run: |
@@ -69,12 +67,12 @@ jobs:
           echo "BlogCellDocs contents:"
           ls -la BlogCellDocs
           echo "VitePress dist contents:"
-          ls -la BlogCellDocs/.vitepress/dist || echo "Dist directory not found"
+          ls -la BlogCellDocs/dist || echo "Dist directory not found"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: BlogCellDocs/.vitepress/dist
+          path: BlogCellDocs/dist
 
   # Deployment job
   deploy:

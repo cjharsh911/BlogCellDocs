@@ -3,22 +3,22 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/blogcelldocs/',
-  title: "BlogCell.",
+  title: "BlogCell.Docs.",
   description: "Docs.",
   outDir: './dist',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'VBA Documentation', link: '/vba-documentation' }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Go To',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'VBA Documentation', link: '/vba-documentation' },
+          { text: 'Blogs', link: '/blogging' }
         ]
       }
     ],

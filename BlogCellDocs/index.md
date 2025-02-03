@@ -8,18 +8,20 @@ hero:
   tagline: Deploy your VBA code with ease.
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: VBA Documentation
+      link: /vba-documentation
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Blogs
+      link: /blogging
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Blogging
+    details: Share insights, tutorials, and articles effortlessly with a minimalist Markdown-based blog structure.
+  - title: Spreadsheet Preset
+    details: Access and share pre-configured Excel templates and formats for enhanced productivity.
+  - title: VBA Documentation
+    details: A dynamic repository of VBA scripts, enabling easy access and updates for automation enthusiasts.
+
+
 ---
 

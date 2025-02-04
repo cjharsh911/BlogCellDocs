@@ -1,85 +1,59 @@
-# Markdown Extension Examples
+# Setting Up a Personal Workbook for VBA Code in Any Excel Workbook
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+Excel’s **Personal Macro Workbook** is a hidden workbook that loads every time you launch Excel. It allows you to store VBA macros in one central location, making your automation tools available across all workbooks without the need to copy the code each time.
 
-## Syntax Highlighting
+---
 
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
+## What is the Personal Macro Workbook?
 
-**Input**
+The **Personal Macro Workbook** (`PERSONAL.XLSB`) is a hidden workbook that opens automatically with Excel. It serves as a central repository for your VBA code, making your macros available for use in any workbook you work on.
 
-````md
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-````
+---
 
-**Output**
+## Creating Your Personal Macro Workbook
 
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
+To create your Personal Macro Workbook, follow these steps:
 
-## Custom Containers
+1. **Open Excel:**
+   - Launch Excel normally.
 
-**Input**
+2. **Enable the Developer Tab:**
+   - Navigate to **File > Options > Customize Ribbon**.
+   - Check the **Developer** option in the right pane and click **OK**.
 
-```md
-::: info
-This is an info box.
-:::
+3. **Record a Dummy Macro:**
+   - Go to the **Developer** tab and click **Record Macro**.
+   - In the **Record Macro** dialog:
+     - **Macro Name:** Enter a name (e.g., `DummyMacro`).
+     - **Store Macro in:** Choose **Personal Macro Workbook**.
+   - Click **OK** and immediately click **Stop Recording**.
 
-::: tip
-This is a tip.
-:::
+4. **Save the Personal Macro Workbook:**
+   - When prompted upon closing Excel, save the changes to `PERSONAL.XLSB`.
 
-::: warning
-This is a warning.
-:::
+---
 
-::: danger
-This is a dangerous warning.
-:::
+## Accessing and Editing Your Personal Macro Workbook
 
-::: details
-This is a details block.
-:::
-```
+To add or update your VBA code in `PERSONAL.XLSB`:
 
-**Output**
+1. **Open the VBA Editor:**
+   - Press `Alt + F11` to launch the Visual Basic for Applications (VBA) editor.
 
-::: info
-This is an info box.
-:::
+2. **Locate `PERSONAL.XLSB`:**
+   - In the **Project Explorer** (if not visible, press `Ctrl + R`), find the `PERSONAL.XLSB` project.
 
-::: tip
-This is a tip.
-:::
+3. **Unhide the Personal Macro Workbook (Optional):**
+   - Return to Excel and go to **View > Unhide**.
+   - Select `PERSONAL.XLSB` from the list and click **OK**.
+   - *Tip:* Unhiding is useful for making edits, but remember to hide it again when done.
 
-::: warning
-This is a warning.
-:::
+4. **Add or Modify VBA Code:**
+   - In the VBA editor, right-click on `Modules` under `PERSONAL.XLSB` and choose **Insert > Module**.
+   - Add your VBA code. For example:
 
-::: danger
-This is a dangerous warning.
-:::
+   ```vba
+   Sub ExampleMacro()
+       MsgBox "Hello, this is your personal macro!"
+   End Sub
 
-::: details
-This is a details block.
-:::
-
-## More
-
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).

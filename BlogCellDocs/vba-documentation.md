@@ -4,7 +4,7 @@ Excel’s **Personal Macro Workbook** is a hidden workbook that loads every time
 
 ---
 
-## What is the Personal Macro Workbook?
+## Personal Macro Workbook
 
 The **Personal Macro Workbook** (`PERSONAL.XLSB`) is a hidden workbook that opens automatically with Excel. It serves as a central repository for your VBA code, making your macros available for use in any workbook you work on.
 
@@ -33,7 +33,7 @@ To create your Personal Macro Workbook, follow these steps:
 
 ---
 
-## Accessing and Editing Your Personal Macro Workbook
+## Accessing and Editing
 
 To add or update your VBA code in `PERSONAL.XLSB`:
 
@@ -52,7 +52,7 @@ To add or update your VBA code in `PERSONAL.XLSB`:
    - In the VBA editor, right-click on `Modules` under `PERSONAL.XLSB` and choose **Insert > Module**.
    - Add your VBA code. For example:
 
-   ```vba
+   ```js
    Sub ExampleMacro()
        MsgBox "Hello, this is your personal macro!"
    End Sub
